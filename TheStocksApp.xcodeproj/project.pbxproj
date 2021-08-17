@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B425D6C26CBC3C3003CD01C /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B425D6B26CBC3C3003CD01C /* APICaller.swift */; };
+		1B425D6F26CBC3D5003CD01C /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B425D6E26CBC3D5003CD01C /* PersistanceManager.swift */; };
+		1B425D7226CBC3E4003CD01C /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B425D7126CBC3E4003CD01C /* HapticsManager.swift */; };
 		1BFB3CD026CAA2F9003D7C31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFB3CCF26CAA2F9003D7C31 /* AppDelegate.swift */; };
 		1BFB3CD226CAA2F9003D7C31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFB3CD126CAA2F9003D7C31 /* SceneDelegate.swift */; };
 		1BFB3CD426CAA2F9003D7C31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFB3CD326CAA2F9003D7C31 /* ViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B425D6B26CBC3C3003CD01C /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		1B425D6E26CBC3D5003CD01C /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
+		1B425D7126CBC3E4003CD01C /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		1BFB3CCC26CAA2F9003D7C31 /* TheStocksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheStocksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BFB3CCF26CAA2F9003D7C31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BFB3CD126CAA2F9003D7C31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +102,9 @@
 		1BFB3CE926CAA82F003D7C31 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				1B425D6B26CBC3C3003CD01C /* APICaller.swift */,
+				1B425D6E26CBC3D5003CD01C /* PersistanceManager.swift */,
+				1B425D7126CBC3E4003CD01C /* HapticsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -178,7 +187,10 @@
 			files = (
 				1BFB3CD426CAA2F9003D7C31 /* ViewController.swift in Sources */,
 				1BFB3CD026CAA2F9003D7C31 /* AppDelegate.swift in Sources */,
+				1B425D7226CBC3E4003CD01C /* HapticsManager.swift in Sources */,
 				1BFB3CEC26CAA9A6003D7C31 /* WatchListViewController.swift in Sources */,
+				1B425D6F26CBC3D5003CD01C /* PersistanceManager.swift in Sources */,
+				1B425D6C26CBC3C3003CD01C /* APICaller.swift in Sources */,
 				1BFB3CD226CAA2F9003D7C31 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
