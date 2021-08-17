@@ -6,7 +6,7 @@
 //
 
 import Foundation
-//step 5 this class will manage all things for persistance during life cycle
+
 final class PersistanceManager {
 
     private init() {}
