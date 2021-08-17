@@ -7,7 +7,6 @@
 
 import Foundation
 
-//step 1 create  api caller with some marks on what we needed
 final class APICaller {
     static let shared = APICaller()
     
@@ -25,7 +24,6 @@ final class APICaller {
     //search stocks
     
     //MARK:- Private
-    //step 2 create endpoint search, and custom error
     private enum Endpoint: String {
         case search
     }
@@ -34,13 +32,11 @@ final class APICaller {
         case invalidUrl
         case noDataReturned
     }
-    
-    //step 3 create a url request function with queryParams
+
     private func url(for endpoint: Endpoint, queryParams: [String: String] = [:]) -> URL? {
         return nil
     }
-    
-    //step 4 create a request generic using codeable
+
     private func request<T: Codable>(url: URL?, expecting: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
         //verify not null
         guard let url = url else { return }
