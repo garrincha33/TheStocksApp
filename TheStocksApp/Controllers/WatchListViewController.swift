@@ -13,8 +13,9 @@ class WatchListController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         setupSearchController()
+        setupTitleView()
+    
     }
-    //step 1 create a function to hold search controller
     private func setupSearchController() {
         let resultViewController = SearchResultsViewController()
         let searchViewController = UISearchController(searchResultsController: resultViewController)
@@ -22,8 +23,16 @@ class WatchListController: UIViewController {
         navigationItem.searchController = searchViewController
     }
     
+    private func setupTitleView() {
+        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: view.width, height: navigationController?.navigationBar.height ?? 100))
+        let lable = UILabel(frame: CGRect(x: 10, y: 0, width: titleView.width-20, height: titleView.height))
+        lable.text = "Stocks"
+        lable.font = .systemFont(ofSize: 35, weight: .medium)
+        titleView.addSubview(lable)
+        navigationItem.titleView = titleView
+    }
+    
 }
-//step 2 extend watchlistcontroller with searchresults updating
 extension WatchListController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let query = searchController.searchBar.text,
