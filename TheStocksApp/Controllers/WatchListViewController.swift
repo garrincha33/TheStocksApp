@@ -14,10 +14,12 @@ class WatchListController: UIViewController {
         view.backgroundColor = .systemBackground
         setupSearchController()
         setupTitleView()
-    
+        
     }
     private func setupSearchController() {
         let resultViewController = SearchResultsViewController()
+        //step 9  set the delegate self
+        resultViewController.delegate = self
         let searchViewController = UISearchController(searchResultsController: resultViewController)
         searchViewController.searchResultsUpdater = self //we can get user taps
         navigationItem.searchController = searchViewController
@@ -45,6 +47,13 @@ extension WatchListController: UISearchResultsUpdating {
         //optimise search when user stops typing and
         
         //update results controller
-        print(query)
+        //step 11
+        resultsViewController.update(with: ["Google"])
+    }
+}
+
+extension WatchListController: SearchResultsViewControllerDelegate {
+    func searchResultsViewControllerDidSelect(searchResult: String) {
+        //presenf details of the selected stock
     }
 }
