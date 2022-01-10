@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B0DD8BB27870229009D1E80 /* SearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DD8BA27870229009D1E80 /* SearchResultsTableViewCell.swift */; };
+		1B0DD97B278CD058009D1E80 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DD97A278CD058009D1E80 /* SearchResponse.swift */; };
 		1B425D6C26CBC3C3003CD01C /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B425D6B26CBC3C3003CD01C /* APICaller.swift */; };
 		1B425D6F26CBC3D5003CD01C /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B425D6E26CBC3D5003CD01C /* PersistanceManager.swift */; };
 		1B425D7226CBC3E4003CD01C /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B425D7126CBC3E4003CD01C /* HapticsManager.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		1B0DD8BA27870229009D1E80 /* SearchResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewCell.swift; sourceTree = "<group>"; };
+		1B0DD97A278CD058009D1E80 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		1B425D6B26CBC3C3003CD01C /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		1B425D6E26CBC3D5003CD01C /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 		1B425D7126CBC3E4003CD01C /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		1BFB3CE626CAA810003D7C31 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1B0DD97A278CD058009D1E80 /* SearchResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				1BFB3CEC26CAA9A6003D7C31 /* WatchListViewController.swift in Sources */,
 				1B425D7526CD08DD003CD01C /* TopStoriesViewController.swift in Sources */,
 				1B425D6F26CBC3D5003CD01C /* PersistanceManager.swift in Sources */,
+				1B0DD97B278CD058009D1E80 /* SearchResponse.swift in Sources */,
 				1B425D6C26CBC3C3003CD01C /* APICaller.swift in Sources */,
 				1B425D7826CD08F3003CD01C /* SearchResultsViewController.swift in Sources */,
 				1BFB3CD226CAA2F9003D7C31 /* SceneDelegate.swift in Sources */,
