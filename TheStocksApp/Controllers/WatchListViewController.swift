@@ -9,6 +9,9 @@ import UIKit
 
 class WatchListController: UIViewController {
     
+    //step 13 declare a timer
+    private var searchTimer: Timer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -18,7 +21,6 @@ class WatchListController: UIViewController {
     }
     private func setupSearchController() {
         let resultViewController = SearchResultsViewController()
-        //step 9  set the delegate self
         resultViewController.delegate = self
         let searchViewController = UISearchController(searchResultsController: resultViewController)
         searchViewController.searchResultsUpdater = self //we can get user taps
@@ -43,17 +45,29 @@ extension WatchListController: UISearchResultsUpdating {
             return
         }
         //call api here to search here
-        
-        //optimise search when user stops typing and
-        
-        //update results controller
-        //step 11
-        resultsViewController.update(with: ["Google"])
+        //step 11 call your api
+        searchTimer?.invalidate()
+        searchTimer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false, block: { _ in
+            APICaller.shared.search(query: query) { result in
+                switch result {
+                case .success(let response):
+                    DispatchQueue.main.async {
+                        resultsViewController.update(with: response.result)
+                    }
+                case .failure(let error):
+                    DispatchQueue.main.async {
+                        resultsViewController.update(with: [])
+                    }
+                    print(error)
+                }
+            }
+        })
     }
 }
 
+//step 12 update all deletegates with SearchResult not string
 extension WatchListController: SearchResultsViewControllerDelegate {
-    func searchResultsViewControllerDidSelect(searchResult: String) {
-        //presenf details of the selected stock
+    func searchResultsViewControllerDidSelect(searchResult: SearchResult) {
+        print("did select: \(searchResult.displaySymbol)")
     }
 }
